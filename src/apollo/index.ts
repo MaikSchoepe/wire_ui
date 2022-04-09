@@ -1,18 +1,12 @@
-import type { ApolloClientOptions } from '@apollo/client/core'
-import { createHttpLink, InMemoryCache } from '@apollo/client/core'
-import type { BootFileParams } from '@quasar/app'
+import type { ApolloClientOptions } from '@apollo/client/core';
+import { createHttpLink, InMemoryCache } from '@apollo/client/core';
 
-export /* async */ function getClientOptions(
-  /* {app, router, ...} */ options?: Partial<BootFileParams<any>>
-) {
+export /* async */ function getClientOptions() {
   return <ApolloClientOptions<unknown>>Object.assign(
     // General options.
     <ApolloClientOptions<unknown>>{
       link: createHttpLink({
-        uri:
-          process.env.GRAPHQL_URI ||
-          // Change to your graphql endpoint.
-          'https://example.com/graphql',
+        uri: process.env.GRAPHQL_URI || 'http://localhost:5000/graphql',
       }),
 
       cache: new InMemoryCache(),
@@ -79,5 +73,5 @@ export /* async */ function getClientOptions(
           ssrForceFetchDelay: 100,
         }
       : {}
-  )
+  );
 }
