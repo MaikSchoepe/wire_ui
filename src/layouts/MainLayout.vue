@@ -24,7 +24,14 @@
       @mouseout="miniState = true"
     >
       <q-list>
-        <q-item clickable v-ripple>
+        <q-item clickable v-ripple to="/">
+          <q-item-section avatar>
+            <q-icon color="primary" name="dashboard" />
+          </q-item-section>
+
+          <q-item-section>Dashboard</q-item-section>
+        </q-item>
+        <q-item clickable v-ripple to="areas">
           <q-item-section avatar>
             <q-icon color="primary" name="foundation" />
           </q-item-section>

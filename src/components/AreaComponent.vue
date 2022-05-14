@@ -1,5 +1,6 @@
 <template>
   <q-page class="row items-center justify-evenly">
+    <h1>Areas</h1>
     <div v-if="loading">Loading...</div>
     <div v-else-if="error">Error: {{ error.message }}</div>
     <div v-else-if="result && result.areas">
