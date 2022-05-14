@@ -1,6 +1,6 @@
 <template>
-  <q-page class="row items-center justify-evenly">
-    <h1>Welcome</h1>
+  <q-page padding class="row items-center justify-evenly">
+    <h3>Places</h3>
   </q-page>
 </template>
 
@@ -8,7 +8,7 @@
 import { defineComponent } from 'vue';
 
 export default defineComponent({
-  name: 'DashboardComponent',
+  name: 'PlacePage',
   setup() {
     return {};
   },

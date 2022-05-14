@@ -21,10 +21,10 @@
       bordered
       :mini="miniState"
       @mouseover="miniState = false"
-      @mouseout="miniState = true"
+      @mouseout="miniState = false"
     >
       <q-list>
-        <q-item clickable v-ripple to="/">
+        <q-item clickable v-ripple to="dashboard">
           <q-item-section avatar>
             <q-icon color="primary" name="dashboard" />
           </q-item-section>
@@ -38,7 +38,7 @@
 
           <q-item-section>Bereiche</q-item-section>
         </q-item>
-        <q-item clickable v-ripple>
+        <q-item clickable v-ripple to="places">
           <q-item-section avatar>
             <q-icon color="primary" name="room" />
           </q-item-section>
@@ -70,7 +70,7 @@ export default defineComponent({
       toggleLeftDrawer() {
         leftDrawerOpen.value = !leftDrawerOpen.value;
       },
-      miniState: ref(true),
+      miniState: ref(false),
     };
   },
 });

@@ -1,15 +1,15 @@
 <template>
-  <q-page padding>
+  <q-page padding class="row items-center justify-evenly">
     <area-component></area-component>
   </q-page>
 </template>
 
-<script>
+<script lang="ts">
 import AreaComponent from 'components/AreaComponent.vue';
 import { defineComponent } from 'vue';
 
 export default defineComponent({
-  name: 'IndexPage',
+  name: 'AreaPage',
   components: { AreaComponent },
   setup() {
     return {};

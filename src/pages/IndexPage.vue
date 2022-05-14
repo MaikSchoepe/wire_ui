@@ -1,6 +1,6 @@
 <template>
   <q-page class="row items-center justify-evenly">
-    <dashboard-component title="Welcome" active></dashboard-component>
+    <dashboard-component></dashboard-component>
   </q-page>
 </template>
 
