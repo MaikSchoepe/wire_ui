@@ -1,16 +1,15 @@
 <template>
   <q-page class="row items-center justify-evenly">
-    <dashboard-component title="Welcome" active></dashboard-component>
+    <h1>Welcome</h1>
   </q-page>
 </template>
 
 <script lang="ts">
-import DashboardComponent from 'components/DashboardComponent.vue';
 import { defineComponent } from 'vue';
 
 export default defineComponent({
-  name: 'IndexPage',
-  components: { DashboardComponent },
+  name: 'DashboardComponent',
+  props: {},
   setup() {
     return {};
   },

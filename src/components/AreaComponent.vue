@@ -18,7 +18,7 @@ import { useQuery } from '@vue/apollo-composable';
 import gql from 'graphql-tag';
 
 export default defineComponent({
-  name: 'ExampleComponent',
+  name: 'AreaComponent',
   props: {},
   setup() {
     const { result, loading, error } = useQuery(gql`
