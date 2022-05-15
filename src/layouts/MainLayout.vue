@@ -24,21 +24,21 @@
       @mouseout="miniState = false"
     >
       <q-list>
-        <q-item clickable v-ripple to="dashboard">
+        <q-item clickable v-ripple to="/dashboard">
           <q-item-section avatar>
             <q-icon color="primary" name="dashboard" />
           </q-item-section>
 
           <q-item-section>Dashboard</q-item-section>
         </q-item>
-        <q-item clickable v-ripple to="areas">
+        <q-item clickable v-ripple to="/areas">
           <q-item-section avatar>
             <q-icon color="primary" name="foundation" />
           </q-item-section>
 
           <q-item-section>Bereiche</q-item-section>
         </q-item>
-        <q-item clickable v-ripple to="places">
+        <q-item clickable v-ripple to="/places">
           <q-item-section avatar>
             <q-icon color="primary" name="room" />
           </q-item-section>

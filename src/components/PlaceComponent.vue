@@ -11,7 +11,29 @@
         v-model:pagination="pagination"
         :loading="loading"
         :filter="filter"
-      ></q-table>
+      >
+        <template v-slot:body-cell-actions="props">
+          <q-td :props="props">
+            <q-btn
+              dense
+              round
+              flat
+              :to="{
+                name: 'add_room',
+                params: { placeId: props.row.id },
+              }"
+              icon="add"
+            ></q-btn>
+            <q-btn
+              dense
+              round
+              flat
+              :to="{ name: 'rooms', params: { placeId: props.row.id } }"
+              icon="space_dashboard"
+            ></q-btn>
+          </q-td>
+        </template>
+      </q-table>
     </div>
   </q-page>
 </template>
@@ -52,6 +74,7 @@ const columns: QTableProps['columns'] = [
     sortable: true,
     align: 'left',
   },
+  { name: 'actions', label: '', field: '', align: 'center' },
 ];
 
 export default defineComponent({
